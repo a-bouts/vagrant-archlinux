@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-DOCKER_COMPOSE_VERSION = "1.17.0"
+DOCKER_COMPOSE_VERSION = "1.18.0"
 
 Vagrant.configure("2") do |config|
 
