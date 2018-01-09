@@ -33,10 +33,10 @@ Vagrant.configure("2") do |config|
 
     echo "[archlinuxfr]" >> /etc/pacman.conf
     echo "SigLevel = Never" >> /etc/pacman.conf
-    echo "Server = http://repo.archlinux.fr/$arch" >> /etc/pacman.conf
+    echo "Server = http://repo.archlinux.fr/x86_64" >> /etc/pacman.conf
 
     pacman -Sy
-    pacman -S yaourt
+    pacman -S --noconfirm yaourt
 
   SHELL
 
@@ -74,6 +74,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "pacman -S --noconfirm firefox"
 
   # gatling
-  config.vm.provision "shell", inline: "yaourt -S --noconfirm gatling-stress-tool"
+  config.vm.provision "shell", privileged: false, inline: "yaourt -S --noconfirm gatling-stress-tool"
 
 end
