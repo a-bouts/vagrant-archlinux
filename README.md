@@ -11,6 +11,7 @@ Archlinux development environment provided by Vagrantfile
 Inside source directory
 
 ```shell
+vagrant plugin install vagrant-disksize
 vagrant up
 ```
 
